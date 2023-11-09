@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Panier HTML5 + JavaScript</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+       
+    </head>
+
+    
+ 
+
+    <body>
+        <div class="texte">
+        <header>
+            
+            <img class="logoblanc" src="blanc.png" alt="logo blanc">
+            <div class="entete">
+                <a href="#">Accueil</a>
+                <a href="#">Magasin</a>
+                <a href="#">L'équipe</a>
+                <a href="#">Mon compte</a>
+                <img class="caddy" src="panier.png" alt="panier">
+    
+            </div>
+        
+        </header>
+
+        
+        <img class="the" src="the.jpg" alt="the">
+        <section  class="container">
+         <div class="article">
+            <article class="well form-inline pull-left col-lg-5">
+            <div class="the">
+            <div class="titre">
+                <legend>Le thé de mamie</legend>
+            </div>
+
+
+            <div class="bloc">
+                <a href="articlethe1.jpg"><img src="articlethe1mini.jpg" alt="articlethe1" title="Cliquez pour agrandir"></a>
+                <label class="col-lg-3">Le thé de mamie</label><br><br>
+                <label class="col-lg-3" >Quantité: <input type = "number" id = "qte1" style="width:120px" class="input-sm form-control"></input></label> <br><br> 
+                <div class="prix">
+                <label class="col-lg-3">Prix</label> : <input id="prix1" disabled value="12.60"> <br><br>
+                </div>
+                <button class="btn btn-primary" type="submit" onclick="ajouter(1)" id="id"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
+            </div>
+
+            </article>
+        </section>  
+        
+        <section  class="container">
+            <article class="well form-inline pull-left col-lg-5">
+               
+                   <div class="titre">
+                <legend>Le t-fusion</legend>
+                   </div> 
+
+            <div class="bloc">
+                <a href="articlethe2.jpg"><img src="articlethe2mini.jpg" alt="articlethe2" title="Cliquez pour agrandir"></a>
+                <label class="col-lg-3">Le t-fusion</label><br><br>
+                <label class="col-lg-3" >Quantité: <input type = "number" id = "qte2" style="width:120px" class="input-sm form-control"></input></label><br><br> 
+                <div class="prix">
+                <label class="col-lg-3">Prix</label> : <input id="prix2" disabled value="10.50"><br><br>
+                </div>
+                <button class="btn btn-primary" type="submit" onclick="ajouter(2)" id="id"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
+            </div>
+        </section>
+        </div>
+            <img src="cafe.jpg" alt="cafe">
+        <section  class="container">
+            <article class="well form-inline pull-left col-lg-5">
+                <div class="cafe">
+                <div class="titre">
+                    <legend>Le café de maman</legend>
+                </div>
+    
+                <div class="bloc">
+                    <a href="articlecafe1.jpg"><img src="articlecafe1mini.jpg" alt="articlecafe1" title="Cliquez pour agrandir"></a>
+                    <label class="col-lg-3">Le café de maman</label><br><br>
+                    <label class="col-lg-3" >Quantité: <input type = "number" id = "qte3" style="width:120px" class="input-sm form-control"></input></label> <br><br> 
+                    <div class="prix">
+                    <label class="col-lg-3">Prix</label> : <input id="prix3" disabled value = "8.60"><br><br>
+                    </div>
+                    <button class="btn btn-primary" type="submit" onclick="ajouter(3)" id="id"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
+                </div>   
+                 </section>
+                </article>
+        </section>
+            </article>
+        <section  class="container">
+            <article class="well form-inline pull-left col-lg-5">
+
+            <div class="titre">
+                <legend>Kafey</legend>
+            </div>
+
+            <div class="bloc">
+                <a href="articlecafe2.jpg"><img src="articlecafe2mini.jpg" alt="articlecafe2" title="Cliquez pour agrandir"></a>
+                <label class="col-lg-3">Kafey</label><br><br>
+                <label class="col-lg-3" >Quantité: <input type = "number" id = "qte4" style="width:120px" class="input-sm form-control"></input></label><br><br> 
+                <div class="prix">
+                <label class="col-lg-3">Prix</label> : <input id="prix4" disabled value="15.40"><br><br>
+                </div>
+                <button class="btn btn-primary" type="submit" onclick="ajouter(4)" id="id"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
+            </div>
+            
+            </article>
+           
+        </section>
+        </div>
+        <section class="container">
+          <div class="panier">
+            <article class="well form-inline pull-left col-lg-5">
+                <legend class="titre">Contenu du panier</legend>
+                <table id="tableau" class="table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Qte</th>
+                            <th>Prix unitaire</th>
+                            <th>Prix</th>
+                            <th>Supprimer</th>
+                        </tr>
+                    </thead>
+                </table>
+                <br><label class="tableau">Prix du panier total</label> : <label id = "prixTotal"></label>
+                <label id = "nbreLignes" hidden>0</label>
+            </article>
+          </div>
+        </section>
+    
+        <footer>
+            <div class="menu">
+            <a href="#">Menu</a>
+            </div>
+            <div class="logo">
+            <img  src="blanc.png" alt="logoblanc">
+        </div>
+        <div class="reseau">
+            <img class="icone" src="instagram.svg" alt="instagram">
+            <img class="icone" src="facebook.svg" alt="facebook">
+            <img class="icone" src="youtube.svg" alt="youtube">
+        </div>
+        </div>
+        <div class="mention">
+            <a href="#">Mentions légales</a>
+            <a  href="#">Conditions de livraison</a>
+            <a href="#">Politique de confidentialité</a>
+        </div>
+        </footer>
+
+        <script src="panier.js"></script>
+    </body>
+</div>
+</html>
